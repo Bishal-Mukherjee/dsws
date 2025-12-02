@@ -4,7 +4,10 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --breakpoint-xlaptop: 1680px;
+  /* --breakpoint-2xl: 1536px;
+  --breakpoint-xlaptop: 1680px; */
+  --breakpoint-laptop: 1536px;
+  --breakpoint-desktop: 1680px;
 }
 
 @theme inline {

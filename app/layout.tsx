@@ -3,7 +3,9 @@ import { Lexend } from "next/font/google";
 import { cn } from "@/lib/utils";
 import "./globals.css";
 
+import { Navbar } from "@/components/layout/Navbar";
 import { Main } from "@/components/layout/Main";
+import Footer from "@/components/layout/Footer";
 
 const lexend = Lexend({
   variable: "--font-lexend",
@@ -24,7 +26,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={cn("tracking-tight antialiased", lexend.className)}>
+        <Navbar />
         <Main>{children}</Main>
+        <Footer />
       </body>
     </html>
   );
