@@ -1,4 +1,4 @@
-import { HomeBanner } from "@/components/modules/Home/HomeBanner";
+import { HeroSection } from "@/components/modules/Home/HeroSection";
 import { WorkAndImpact } from "@/components/modules/Home/WorkAndImpact";
 import { Journey } from "@/components/modules/Home/Journey";
 import { PartnersAndSupporters } from "@/components/modules/Home/PartnersAndSuporters";
@@ -7,8 +7,8 @@ import { Achievements } from "@/components/modules/Home/Achievements";
 
 export default function Home() {
   return (
-    <div className="flex-1 w-full space-y-20">
-      <HomeBanner />
+    <div className="max-w-6xl mx-auto space-y-20">
+      <HeroSection />
       <WorkAndImpact />
       <Journey />
       <Achievements />

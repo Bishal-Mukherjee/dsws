@@ -26,7 +26,7 @@ const partners = [
 
 export function PartnersAndSupporters() {
   return (
-    <section className="max-w-7xl mx-auto">
+    <section>
       <div className="text-center mb-8">
         <h2 className="text-black/80 dark:text-white text-3xl font-bold leading-tight tracking-[-0.015em] mb-3">
           Our Partners & Supporters
@@ -44,7 +44,7 @@ export function PartnersAndSupporters() {
             key={index}
             target="_blank"
             rel="noopener noreferrer"
-			className="h-10"
+            className="h-10"
           >
             <div className="transition-transform transform hover:scale-105 hover:opacity-100 opacity-80">
               <Image

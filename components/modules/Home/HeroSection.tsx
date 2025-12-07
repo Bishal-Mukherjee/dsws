@@ -1,8 +1,8 @@
 import { Button } from "@/components/ui/button";
 
-export function HomeBanner() {
+export function HeroSection() {
   return (
-    <div className="max-w-7xl mx-auto">
+    <section>
       <div
         className="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat sm:gap-8 sm:rounded-xl items-center justify-center p-4"
         style={{
@@ -23,6 +23,6 @@ export function HomeBanner() {
           Join Our Mission
         </Button>
       </div>
-    </div>
+    </section>
   );
 }

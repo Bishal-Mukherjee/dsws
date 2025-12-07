@@ -36,7 +36,7 @@ const values = [
 
 export function OurValues() {
   return (
-    <section className="max-w-7xl mx-auto">
+    <section>
       <div className="bg-[#dff7e6] w-full p-4 py-6 rounded-2xl">
         <div className="text-center mb-8">
           <h2 className="text-3xl font-bold text-black/80">Our Values</h2>

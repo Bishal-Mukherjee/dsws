@@ -45,7 +45,7 @@ const achievements = [
 
 export function Achievements() {
   return (
-    <section className="max-w-7xl mx-auto mt-4">
+    <section className="mt-4">
       <div className="text-center mb-8">
         <h2 className="text-3xl font-bold">Our Achievements</h2>
         <p className="text-[#61896f] dark:text-white/60">

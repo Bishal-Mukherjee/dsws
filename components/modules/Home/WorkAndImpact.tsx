@@ -56,7 +56,7 @@ const impactStats: ImpactStat[] = [
 
 export function WorkAndImpact() {
   return (
-    <section className="max-w-7xl mx-auto space-y-12">
+    <section className="space-y-12">
       <div className="text-center mb-8">
         <h2 className="text-black/80 dark:text-white text-3xl font-bold leading-tight tracking-[-0.015em] mb-3">
           Our Work
