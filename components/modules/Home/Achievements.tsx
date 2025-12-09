@@ -47,7 +47,7 @@ export function Achievements() {
   return (
     <section className="mt-4">
       <div className="text-center mb-8">
-        <h2 className="text-3xl font-bold">Our Achievements</h2>
+        <h2 className="text-3xl font-bold text-black/80">Our Achievements</h2>
         <p className="text-[#61896f] dark:text-white/60">
           Milestones that mark our journey of impact
         </p>

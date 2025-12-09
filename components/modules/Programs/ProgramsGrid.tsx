@@ -41,11 +41,11 @@ const programs = [
 export function ProgramsGrid() {
   return (
     <section className="max-w-7xl mx-auto">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         {programs.map((program, index) => (
           <Card
             key={index}
-            className="group overflow-hidden border-none shadow-none transition-shadow duration-300 p-0 gap-2"
+            className="group overflow-hidden shadow-none transition-shadow duration-300 p-0 gap-2"
           >
             <div className="relative h-48 overflow-hidden">
               <Image

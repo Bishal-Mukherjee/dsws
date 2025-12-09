@@ -74,10 +74,10 @@ export function Journey() {
             >
               <div className="md:hidden flex gap-6 w-full">
                 <div className="relative shrink-0">
-                  <div className="size-4 rounded-full bg-[#54ec63] border-4 border-white mt-4 ml-[9px]" />
+                  <div className="size-4 rounded-full bg-[#54ec63] border-4 border-white mt-4 ml-[25px]" />
                 </div>
 
-                <div className="flex-1 pb-8 -mt-1.5">
+                <div className="flex-1 pb-8 -mt-1.5 ml-[-15px]">
                   <div className="p-6 py-4 rounded-xl border border-[#dbe6df] dark:border-white/10 bg-white dark:bg-background-dark">
                     <p className="text-[#54ec63] font-bold">{milestone.year}</p>
                     <h3 className="text-lg font-bold text-black/80 dark:text-white mt-1">

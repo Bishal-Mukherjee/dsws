@@ -100,7 +100,7 @@ export function WorkAndImpact() {
             key={index}
             className="flex min-w-[158px] flex-1 flex-col gap-2 rounded-xl p-6 border border-[#dbe6df] dark:border-white/10 bg-white dark:bg-background-dark text-center"
           >
-            <p className="text-black/80 dark:text-white tracking-light text-4xl font-bold leading-tight">
+            <p className="text-black/80 dark:text-white tracking-light text-3xl md:text-4xl font-bold leading-tight">
               {stat.value}
             </p>
             <p className="text-[#61896f] dark:text-white/60 text-base font-medium leading-normal">

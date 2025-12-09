@@ -15,7 +15,7 @@ const buttonVariants = cva("w-56 h-12 rounded-3xl text-md font-semibold", {
 
 export function JoinUs() {
   return (
-    <div className="flex flex-col justify-end gap-6 items-center bg-white py-16 rounded-3xl">
+    <div className="flex flex-col justify-end gap-6 items-center bg-white py-12 rounded-3xl">
       <div className="flex flex-col gap-3 text-center">
         <h2 className="text-black/80 text-3xl font-black max-w-2xl">
           Join Us in Making a Difference

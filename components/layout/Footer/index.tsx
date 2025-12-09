@@ -14,18 +14,18 @@ const footerSections: FooterSection[] = [
   {
     title: "Quick Links",
     links: [
-      { label: "About Us", href: "#" },
-      { label: "Our Work", href: "#" },
-      { label: "Stories", href: "#" },
-      { label: "Contact", href: "#" },
+      { label: "About Us", href: "/about" },
+      { label: "Impact", href: "/impact" },
+      { label: "Programs", href: "/programs" },
+      { label: "Contact", href: "/contact" },
     ],
   },
   {
     title: "Get Involved",
     links: [
       { label: "Donate", href: "#" },
-      { label: "Volunteer", href: "#" },
-      { label: "Partner With Us", href: "#" },
+      { label: "Volunteer", href: "/get-involved" },
+      //   { label: "Partner With Us", href: "#" },
     ],
   },
 ];
@@ -33,7 +33,7 @@ const footerSections: FooterSection[] = [
 export default function Footer() {
   return (
     <footer className="bg-gray-100 dark:bg-background-dark border-t border-[#dbe6df] dark:border-white/10">
-      <div className="max-w-7xl mx-auto py-12 px-4 sm:px-10 lg:px-20">
+      <div className="max-w-7xl mx-auto py-12 px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Logo and Description - Takes 2 columns on desktop */}
           <div className="col-span-1 md:col-span-2">

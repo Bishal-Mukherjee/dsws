@@ -109,7 +109,10 @@ export function MeetOurTeam() {
             <Button variant={"primary"} className="border px-7 py-5">
               Donate Now
             </Button>
-            <Button variant={"secondary"} className="border px-7 py-5">
+            <Button
+              variant={"outline"}
+              className="px-7 py-5 bg-transparent border-black text-md hover:bg-black/5"
+            >
               Get Involved
             </Button>
           </div>

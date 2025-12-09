@@ -18,7 +18,7 @@ const navLinks = [
   { href: "/about", label: "About Us" },
   { href: "/impact", label: "Impact" },
   { href: "/programs", label: "Programs" },
-  { href: "#", label: "Get Involved" },
+  { href: "/get-involved", label: "Get Involved" },
   { href: "#", label: "Contact" },
 ];
 
@@ -50,9 +50,7 @@ export function Navbar() {
                 href={link.href}
                 className={cn(
                   "text-sm font-medium hover:text-foreground transition-colors",
-                  pathname === link.href
-                    ? "text-brand"
-                    : "text-muted-foreground"
+                  pathname === link.href && "text-brand"
                 )}
               >
                 {link.label}
@@ -69,21 +67,24 @@ export function Navbar() {
             </Button>
           </SheetTrigger>
           <SheetContent side="right" className="w-64 px-4">
-            <SheetTitle className="mb-8 mt-4 text-lg font-bold">
-              DSWS
-            </SheetTitle>
-            <nav className="flex flex-col gap-4 mt-8">
+            <SheetTitle className="mt-4 text-lg font-bold">DSWS</SheetTitle>
+            <nav className="flex flex-col gap-4 mt-0">
               {navLinks.map((link) => (
                 <Link
                   key={link.label}
                   href={link.href}
-                  className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                  className={cn(
+                    "text-sm font-medium text-muted-foreground hover:text-foreground transition-colors",
+                    pathname === link.href && "text-brand"
+                  )}
                   onClick={() => setIsOpen(false)}
                 >
                   {link.label}
                 </Link>
               ))}
-              <Button variant="primary">Donate</Button>
+              <Button variant="primary" className="mt-4">
+                Donate
+              </Button>
             </nav>
           </SheetContent>
         </Sheet>

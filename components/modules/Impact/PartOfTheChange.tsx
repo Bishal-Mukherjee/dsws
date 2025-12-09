@@ -17,7 +17,7 @@ export function PartOfTheChange() {
           </Button>
           <Button
             variant={"outline"}
-            className="py-6 bg-transparent border-black text-md"
+            className="py-6 bg-transparent border-black text-md hover:bg-black/5"
           >
             Volunteer With Us
           </Button>
