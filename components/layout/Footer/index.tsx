@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 interface FooterLink {
   label: string;
@@ -64,12 +65,12 @@ export default function Footer() {
               <ul className="mt-4 space-y-2 text-sm">
                 {section.links.map((link, linkIndex) => (
                   <li key={linkIndex}>
-                    <a
+                    <Link
                       className="text-[#61896f] dark:text-white/60 hover:text-primary transition-colors"
                       href={link.href}
                     >
                       {link.label}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>

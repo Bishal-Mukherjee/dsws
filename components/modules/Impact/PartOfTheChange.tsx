@@ -1,4 +1,6 @@
 import { Button } from "@/components/ui/button";
+import { ContributionDialog } from "@/components/common";
+import Link from "next/link";
 
 export function PartOfTheChange() {
   return (
@@ -12,15 +14,19 @@ export function PartOfTheChange() {
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-2 items-center">
-          <Button variant={"primary"} className="py-6 text-md">
-            Donate Now
-          </Button>
-          <Button
-            variant={"outline"}
-            className="py-6 bg-transparent border-black text-md hover:bg-black/5"
-          >
-            Volunteer With Us
-          </Button>
+          <ContributionDialog>
+            <Button variant={"primary"} className="py-6 text-md">
+              Donate Now
+            </Button>
+          </ContributionDialog>
+          <Link href={"/get-involved"} className="w-full">
+            <Button
+              variant={"outline"}
+              className="w-full py-6 bg-transparent border-black text-md hover:bg-black/5"
+            >
+              Volunteer With Us
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

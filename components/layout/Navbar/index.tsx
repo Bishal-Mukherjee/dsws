@@ -13,13 +13,14 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
+import { ContributionDialog } from "@/components/common";
 
 const navLinks = [
   { href: "/about", label: "About Us" },
   { href: "/impact", label: "Impact" },
   { href: "/programs", label: "Programs" },
   { href: "/get-involved", label: "Get Involved" },
-  { href: "#", label: "Contact" },
+  { href: "/contact", label: "Contact" },
 ];
 
 // px-2 2xl:px-8 xlaptop:px-4
@@ -50,14 +51,18 @@ export function Navbar() {
                 href={link.href}
                 className={cn(
                   "text-sm font-medium hover:text-foreground transition-colors",
-                  pathname === link.href && "text-brand"
+                  pathname === link.href
+                    ? "text-brand"
+                    : "text-muted-foreground"
                 )}
               >
                 {link.label}
               </Link>
             ))}
           </div>
-          <Button variant="primary">Donate</Button>
+          <ContributionDialog>
+            <Button variant="primary">Donate</Button>
+          </ContributionDialog>
         </nav>
 
         <Sheet open={isOpen} onOpenChange={setIsOpen}>

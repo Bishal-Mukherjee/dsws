@@ -76,20 +76,22 @@ export function VolunteerTestimonials() {
         </div>
       </div>
 
-      <div className="bg-brand/20 rounded-2xl p-8 md:p-12 text-center">
-        <div className="max-w-2xl mx-auto space-y-4">
-          <h2 className="text-2xl md:text-3xl font-bold text-black/80 dark:text-white">
-            Ready to Make a Difference?
-          </h2>
-          <p className="text-muted-foreground leading-relaxed">
-            Your time and skills can change lives. Join our team of dedicated
-            volunteers and be a part of something bigger than yourself.
-          </p>
-          <Button variant="primary" className="px-8 py-6 mt-4">
-            Apply to be a Volunteer
-          </Button>
+      <section id="apply-for-volunteer">
+        <div className="bg-brand/20 rounded-2xl p-8 md:p-12 text-center">
+          <div className="max-w-2xl mx-auto space-y-4">
+            <h2 className="text-2xl md:text-3xl font-bold text-black/80 dark:text-white">
+              Ready to Make a Difference?
+            </h2>
+            <p className="text-muted-foreground leading-relaxed">
+              Your time and skills can change lives. Join our team of dedicated
+              volunteers and be a part of something bigger than yourself.
+            </p>
+            <Button variant="primary" className="px-8 py-6 mt-4">
+              Apply to be a Volunteer
+            </Button>
+          </div>
         </div>
-      </div>
+      </section>
     </section>
   );
 }

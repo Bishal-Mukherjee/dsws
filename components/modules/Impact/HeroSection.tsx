@@ -1,4 +1,6 @@
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { ContributionDialog } from "@/components/common";
 
 export function HeroSection() {
   return (
@@ -20,10 +22,14 @@ export function HeroSection() {
         </div>
 
         <div className="flex items-center justify-center gap-4">
-          <Button variant="primary">Donate Now</Button>
-          <Button variant="outline" className="border-white">
-            Get Involved
-          </Button>
+          <ContributionDialog>
+            <Button variant="primary">Donate Now</Button>
+          </ContributionDialog>
+          <Link href={"/get-involved"}>
+            <Button variant="outline" className="border-white">
+              Get Involved
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

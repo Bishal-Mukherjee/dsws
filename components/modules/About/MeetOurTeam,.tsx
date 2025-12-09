@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Image from "next/image";
+import Link from "next/link";
+import { ContributionDialog } from "@/components/common";
 
 const teamMembers = [
   {
@@ -106,15 +108,19 @@ export function MeetOurTeam() {
             mission.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 mt-4">
-            <Button variant={"primary"} className="border px-7 py-5">
-              Donate Now
-            </Button>
-            <Button
-              variant={"outline"}
-              className="px-7 py-5 bg-transparent border-black text-md hover:bg-black/5"
-            >
-              Get Involved
-            </Button>
+            <ContributionDialog>
+              <Button variant={"primary"} className="border px-7 py-5">
+                Donate Now
+              </Button>
+            </ContributionDialog>
+            <Link href={"/get-involved"}>
+              <Button
+                variant={"outline"}
+                className="px-7 py-5 bg-transparent border-black text-md hover:bg-black/5"
+              >
+                Get Involved
+              </Button>
+            </Link>
           </div>
         </div>
       </section>

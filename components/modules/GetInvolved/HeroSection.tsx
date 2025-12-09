@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export function HeroSection() {
   return (
@@ -17,9 +18,11 @@ export function HeroSection() {
             Join our mission to empower communities and create a lasting impact.
           </h2>
         </div>
-        <Button variant="primary" size="lg">
-          Apply Now
-        </Button>
+        <Link href={"#apply-for-volunteer"}>
+          <Button variant="primary" size="lg">
+            Apply Now
+          </Button>
+        </Link>
       </div>
     </section>
   );
