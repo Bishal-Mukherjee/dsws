@@ -32,7 +32,7 @@ const footerSections: FooterSection[] = [
   },
 ];
 
-export default function Footer() {
+export function Footer() {
   return (
     <footer className="bg-gray-100 dark:bg-background-dark border-t border-[#dbe6df] dark:border-white/10">
       <div className="max-w-7xl mx-auto py-12 px-4">
