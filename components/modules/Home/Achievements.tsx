@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Medal, Trees, Users, TrendingUp } from "lucide-react";
+import { Medal, Trees, Users, TrendingUp, Award } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 
@@ -51,6 +51,33 @@ export function Achievements() {
         <p className="text-[#61896f] dark:text-white/60">
           Milestones that mark our journey of impact
         </p>
+      </div>
+
+      <div className="mb-8 rounded-2xl bg-gradient-to-r from-yellow-50 via-amber-50 to-orange-50 border-2 border-yellow-400/50 shadow-md shadow-yellow-200/50 p-6 relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-32 h-32 bg-yellow-300/20 rounded-full -mr-16 -mt-16"></div>
+        <div className="absolute bottom-0 left-0 w-24 h-24 bg-orange-300/20 rounded-full -ml-12 -mb-12"></div>
+
+        <div className="relative flex items-center gap-6 justify-center flex-wrap md:flex-nowrap">
+          <div className="flex-shrink-0 w-16 h-16 rounded-full bg-gradient-to-br from-yellow-100 to-orange-400 flex items-center justify-center">
+            <Award className="h-8 w-8 text-yellow-900" strokeWidth={2.5} />
+          </div>
+
+          <div className="text-center md:text-left">
+            <h3 className="text-2xl font-bold bg-gradient-to-r from-yellow-700 via-orange-600 to-yellow-700 bg-clip-text text-transparent mb-1">
+              Nari Shakti Puraskar Winner 2017
+            </h3>
+            <p className="text-sm text-gray-700 dark:text-gray-600">
+              Prestigious national award conferred by the President of India for
+              women's empowerment
+            </p>
+          </div>
+
+          <div className="flex-shrink-0 px-4 py-2 bg-yellow-400/30 border border-yellow-500/50 rounded-full">
+            <span className="text-xs font-bold text-yellow-800 uppercase tracking-wider">
+              National Honor
+            </span>
+          </div>
+        </div>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">

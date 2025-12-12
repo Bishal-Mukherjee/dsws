@@ -1,6 +1,7 @@
+import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
+import { VolunteerDialog } from "@/components/common";
 
 const testimonials = [
   {
@@ -86,9 +87,11 @@ export function VolunteerTestimonials() {
               Your time and skills can change lives. Join our team of dedicated
               volunteers and be a part of something bigger than yourself.
             </p>
-            <Button variant="primary" className="px-8 py-6 mt-4">
-              Apply to be a Volunteer
-            </Button>
+            <VolunteerDialog>
+              <Button variant="primary" className="px-8 py-6 mt-4">
+                Apply to be a Volunteer
+              </Button>
+            </VolunteerDialog>
           </div>
         </div>
       </section>

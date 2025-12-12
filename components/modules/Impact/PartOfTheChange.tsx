@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ContributionDialog } from "@/components/common";
-import Link from "next/link";
+import { ContributionDialog, VolunteerDialog } from "@/components/common";
 
 export function PartOfTheChange() {
   return (
@@ -19,14 +18,14 @@ export function PartOfTheChange() {
               Donate Now
             </Button>
           </ContributionDialog>
-          <Link href={"/get-involved"} className="w-full">
+          <VolunteerDialog>
             <Button
               variant={"outline"}
               className="w-full py-6 bg-transparent border-black text-md hover:bg-black/5"
             >
               Volunteer With Us
             </Button>
-          </Link>
+          </VolunteerDialog>
         </div>
       </div>
     </section>

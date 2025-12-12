@@ -1,3 +1,4 @@
+import { ContributionDialog } from "@/components/common";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -24,7 +25,7 @@ const footerSections: FooterSection[] = [
   {
     title: "Get Involved",
     links: [
-      { label: "Donate", href: "#" },
+      //   { label: "Donate", href: "#" },
       { label: "Volunteer", href: "/get-involved" },
       //   { label: "Partner With Us", href: "#" },
     ],
@@ -63,6 +64,13 @@ export default function Footer() {
                 {section.title}
               </h3>
               <ul className="mt-4 space-y-2 text-sm">
+                {section.title === "Get Involved" && (
+                  <ContributionDialog>
+                    <p className="text-[#61896f] dark:text-white/60 hover:text-primary transition-colors cursor-pointer max-w-fit">
+                      Donate
+                    </p>
+                  </ContributionDialog>
+                )}
                 {section.links.map((link, linkIndex) => (
                   <li key={linkIndex}>
                     <Link

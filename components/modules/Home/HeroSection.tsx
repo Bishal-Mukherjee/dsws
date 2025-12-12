@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { VolunteerDialog } from "@/components/common/VolunteerDialog";
 
 export function HeroSection() {
   return (
@@ -19,9 +20,11 @@ export function HeroSection() {
             development.
           </h2>
         </div>
-        <Button variant="primary" size="lg">
-          Join Our Mission
-        </Button>
+        <VolunteerDialog>
+          <Button variant="primary" size="lg">
+            Join Our Mission
+          </Button>
+        </VolunteerDialog>
       </div>
     </section>
   );

@@ -1,7 +1,6 @@
 import { cva } from "class-variance-authority";
 import { Button } from "@/components/ui/button";
-import { ContributionDialog } from "@/components/common";
-import Link from "next/link";
+import { ContributionDialog, VolunteerDialog } from "@/components/common";
 
 const buttonVariants = cva("w-56 h-12 rounded-3xl text-md font-semibold", {
   variants: {
@@ -31,11 +30,11 @@ export function JoinUs() {
         <ContributionDialog>
           <Button className={buttonVariants()}>Donate Now</Button>
         </ContributionDialog>
-        <Link href={"/get-involved"}>
+        <VolunteerDialog>
           <Button className={buttonVariants({ variant: "involved" })}>
             Get Involved
           </Button>
-        </Link>
+        </VolunteerDialog>
       </div>
     </div>
   );

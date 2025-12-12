@@ -24,13 +24,14 @@ const navLinks = [
 ];
 
 // px-2 2xl:px-8 xlaptop:px-4
+// laptop:px-8 desktop:px-4
 
 export function Navbar() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   return (
     <nav className="sticky top-0 z-50 w-full bg-background/80 backdrop-blur-sm shadow-xs">
-      <div className="h-16 flex items-center justify-between w-full max-w-7xl mx-auto px-2 laptop:px-8 desktop:px-4">
+      <div className="h-16 flex items-center justify-between w-full max-w-7xl mx-auto px-2">
         <Link href="/">
           <div className="flex items-center gap-2">
             <Image
@@ -52,7 +53,7 @@ export function Navbar() {
                 className={cn(
                   "text-sm font-medium hover:text-foreground transition-colors",
                   pathname === link.href
-                    ? "text-brand"
+                    ? "text-brand hover:text-brand"
                     : "text-muted-foreground"
                 )}
               >
