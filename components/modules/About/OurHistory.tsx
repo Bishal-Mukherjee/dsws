@@ -1,27 +1,4 @@
-import { Flag, GraduationCap, Lightbulb, Users } from "lucide-react";
-
-const milestones = [
-  {
-    icon: Flag,
-    title: "Foundation of DSWS",
-    year: "2005",
-  },
-  {
-    icon: GraduationCap,
-    title: "First Educational Center Opened",
-    year: "2008",
-  },
-  {
-    icon: Lightbulb,
-    title: "Women Empowerment Program Launch",
-    year: "2012",
-  },
-  {
-    icon: Users,
-    title: "Reached 10,000+ Beneficiaries",
-    year: "2020",
-  },
-];
+import { milestones } from "@/constants/data/about/milestones";
 
 export function OurHistory() {
   return (
@@ -36,8 +13,7 @@ export function OurHistory() {
           </p>
         </div>
 
-        <div className="space-y-6 relative">
-          <div className="w-0.5 h-[300px] md:h-[250px] bg-gray-200 absolute left-6 top-0" />
+        <div className="space-y-6 relative before:content-[''] before:absolute before:left-6 before:top-0 before:bottom-[12px] before:w-0.5 before:bg-gray-200">
           {milestones.map((milestone, index) => {
             const Icon = milestone.icon;
             return (

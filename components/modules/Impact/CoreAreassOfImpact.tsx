@@ -1,32 +1,5 @@
-import { GraduationCap, User, RefreshCcw, HeartHandshake } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-
-const data = [
-  {
-    title: "Education",
-    content:
-      "Providing quality education and resources to children, ensuring a brighter future for the next generation.",
-    icon: <GraduationCap className="w-6 h-6" />,
-  },
-  {
-    title: "Women Empowerment",
-    content:
-      "Equipping women with skills, financial literacy, and confidence to become independent leaders.",
-    icon: <User className="w-6 h-6" />,
-  },
-  {
-    title: "Rural Development",
-    content:
-      "Improving infrastructure, providing access to clean water, and promoting sustainable agriculture.",
-    icon: <RefreshCcw className="w-6 h-6" />,
-  },
-  {
-    title: "Social Welfare",
-    content:
-      "Running health camps, awareness programs, and providing essential support to vulnerable groups.",
-    icon: <HeartHandshake className="w-6 h-6" />,
-  },
-];
+import { coreAreasOfImpact } from "@/constants/data/impact/coreAreasOfImpact";
 
 export function CoreAreasOfImpact() {
   return (
@@ -41,19 +14,19 @@ export function CoreAreasOfImpact() {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-        {data.map((item, index) => (
+      <div className="flex flex-wrap justify-center gap-4">
+        {coreAreasOfImpact.map((item, index) => (
           <Card
             key={index}
-            className="shadow-none border border-[#dbe6df] gap-0"
+            className="shadow-none border border-[#dbe6df] gap-0 w-full md:w-[calc(25%-12px)]"
           >
             <CardHeader>
               <CardTitle className="text-black/80 text-sm font-semibold space-y-2">
-                <div className="text-brand">{item.icon}</div>
+                <item.icon className="w-6 h-6 text-brand mb-3" />
                 <p className="font-bold">{item.title}</p>
               </CardTitle>
             </CardHeader>
-            <CardContent className="text-black/80 text-sm">
+            <CardContent className="text-black/60 text-sm">
               {item.content}
             </CardContent>
           </Card>

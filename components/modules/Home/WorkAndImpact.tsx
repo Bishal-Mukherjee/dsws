@@ -1,58 +1,4 @@
-import { JSX } from "react";
-import { GraduationCap, Venus, House, Hospital } from "lucide-react";
-
-interface WorkItem {
-  icon: JSX.Element;
-  title: string;
-  description: string;
-}
-
-const workItems: WorkItem[] = [
-  {
-    title: "Child Education",
-    description:
-      "Providing quality education and resources to underprivileged children.",
-    icon: <GraduationCap />,
-  },
-  {
-    title: "Women's Empowerment",
-    description:
-      "Fostering independence through skill development and support programs.",
-    icon: <Venus />,
-  },
-  {
-    title: "Rural Development",
-    description:
-      "Implementing sustainable projects to improve village infrastructure.",
-    icon: <House />,
-  },
-  {
-    title: "Health & Sanitation",
-    description:
-      "Promoting wellness and hygiene through community health initiatives.",
-    icon: <Hospital />,
-  },
-];
-
-interface ImpactStat {
-  value: string;
-  label: string;
-}
-
-const impactStats: ImpactStat[] = [
-  {
-    value: "10,000+",
-    label: "Lives Touched",
-  },
-  {
-    value: "50+",
-    label: "Villages Supported",
-  },
-  {
-    value: "200+",
-    label: "Skill Programs Conducted",
-  },
-];
+import { workItems, impactStats } from "@/constants/data/home/workAndImpact";
 
 export function WorkAndImpact() {
   return (
@@ -74,9 +20,9 @@ export function WorkAndImpact() {
             className="flex flex-1 gap-4 rounded-xl border border-[#dbe6df] dark:border-white/10 bg-white dark:bg-background-dark p-6 flex-col text-center items-center"
           >
             <div className="p-3 rounded-full bg-[#ddfbe0] text-primary">
-              <span className="text-3xl text-[#54ec63]">{item.icon}</span>
+              <item.icon className="text-3xl text-[#54ec63]" />
             </div>
-            <div className="flex flex-col gap-1">
+            <div className="flex flex-col gap-3">
               <h3 className="text-black/80 dark:text-white text-lg font-bold leading-tight">
                 {item.title}
               </h3>
@@ -94,11 +40,11 @@ export function WorkAndImpact() {
         </h2>
       </div>
 
-      <div className="flex flex-wrap gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 justify-items-center">
         {impactStats.map((stat, index) => (
           <div
             key={index}
-            className="flex min-w-[158px] flex-1 flex-col gap-2 rounded-xl p-6 border border-[#dbe6df] dark:border-white/10 bg-white dark:bg-background-dark text-center"
+            className="flex w-full flex-col gap-2 rounded-xl p-6 border border-[#dbe6df] dark:border-white/10 bg-white dark:bg-background-dark text-center"
           >
             <p className="text-black/80 dark:text-white tracking-light text-3xl md:text-4xl font-bold leading-tight">
               {stat.value}

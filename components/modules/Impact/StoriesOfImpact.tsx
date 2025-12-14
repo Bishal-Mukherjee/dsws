@@ -5,7 +5,7 @@ import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { PartOfTheChange } from "./PartOfTheChange";
+import { PartOfTheChange } from "@/components/modules/Impact/PartOfTheChange";
 
 interface Testimonial {
   name: string;
@@ -65,7 +65,7 @@ const testimonials: Testimonial[] = [
   },
 ];
 
-export function StoriesOfHope() {
+export function StoriesOfHope({ showPartOfTheChange = false }) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handlePrevious = () => {
@@ -144,7 +144,7 @@ export function StoriesOfHope() {
         )}
       </div>
 
-      <PartOfTheChange />
+      {showPartOfTheChange && <PartOfTheChange />}
     </section>
   );
 }

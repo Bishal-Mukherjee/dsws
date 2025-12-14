@@ -1,55 +1,6 @@
 import { cn } from "@/lib/utils";
 import Image from "next/image";
-
-interface JourneyMilestone {
-  year: string;
-  title: string;
-  description: string;
-  images: string[];
-  alignRight?: boolean;
-}
-
-const milestones: JourneyMilestone[] = [
-  {
-    year: "2010",
-    title: "Foundation Laid",
-    description:
-      "DSWS was founded with a mission to empower rural communities through education.",
-    images: [],
-    alignRight: false,
-  },
-  {
-    year: "2014",
-    title: "First Major Project",
-    description:
-      "Launched the 'Light Up a Village' initiative, bringing solar power to 10 remote villages.",
-    images: [
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuD7UVbqzp8DGanrmSSDGHjI4joYBh-uu5wlKuKGtuM840wSH_1fhLyswwmEtxUIgmuDTLU0mgKcWP18R0SwrbfOIGP0rXl_fMmO49UijnmC1tosBRl7dcCcnzAZu9BEjaEEf2Mpag-ZCfWqLs4Eo1XptRa4-LRG395aqR667U3sLMvSAqVbin44GJZ3eH2PBc2ixTlMHX_w-FSwlGLDvHiD8PErZhUW_foSJDFf_X3IQhRsDWhobVYHHm_2cyJjgY6huz3Qu1FMUjGI",
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuB_R6ty0XO9CZsAhrAbTg6ycT_HJUGIunjIN8clwJitbNbvOGWJXDpEmjVreIShgwvawywnZy7CuGsvDxC4LCyvoRuRhJNHYfIZxyW0ScDj1CVnPVk0FFPi9jJMW_WZ7VMEsCZA3YTi3R4fnXjvZkX8LAcKszKp6Keky4NZWXXh11WjFxxwCRpc-7C3PBBZ7vuDMQ199-zfIeIsde_kRBxkdhK718NEQOPCvMgExFFx6MdZcFMwVkg8zGdMF_0xS_V__G_2DVroBrqg",
-    ],
-    alignRight: true,
-  },
-  {
-    year: "2018",
-    title: "Women Empowerment Center",
-    description:
-      "Established a dedicated center for vocational training, empowering over 500 women.",
-    images: [
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuDRYU2k9baDFOCW7VP1cWdHO3W-TPlr1VBSiSqRHMVbZYb0aKgsTudQbJAzlMMLSN4ZyTTszg2wJKRD0GZ5d7Vz49PSYryf_hEDnouGzhAepU-pRBS1_iz7vxGadVbfWE0PPIooT1GolR0mxLkG26r12DcTDHNNtzCxU01QTDa4YZy5caQC6qcPvfP77lYi03xbMNGEcgu5QtZI4FaYorsFdFOpcWv0g1K7Wo9KdlRuBjRMhbZS0kyADyI2-xpj1zpuomnTj6Fqrn4W",
-    ],
-    alignRight: false,
-  },
-  {
-    year: "2022",
-    title: "Digital Literacy Program",
-    description:
-      "Introduced computer education in partner schools, bridging the digital divide.",
-    images: [
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuClSkjIUkLQSLbTKup-dX7PZH7nAsDdj8ScPDaKATAsvPLoMO2jNYnyTMc3Kx6atAjfIwYWSqQzGplpAcYKinI9YuNBd10kz9VMfWHkdeubbRIdOTmQCh64qNLwBOQDLbfyAaTtW90TZI3J2XpQ8hxv9mNp0WYJ0Jwn7-GbR9_feU_XE052t_ILyyqUyDrZIGwAU3caoXPpKJqlnlXh_RmgmuOaS_qWRvJK1IN9xtJkw4eSfuoA0vBl_iLa6erssNr8NV-BJDdmzbaX",
-    ],
-    alignRight: true,
-  },
-];
+import { journeyMilestones } from "@/constants/data/home/journeyMilestones";
 
 export function Journey() {
   return (
@@ -67,7 +18,7 @@ export function Journey() {
         <div className="absolute left-8 md:left-1/2 top-0 h-full w-0.5 bg-[#dbe6df] dark:bg-white/10 md:-translate-x-1/2" />
 
         <div className="space-y-6">
-          {milestones.map((milestone, index) => (
+          {journeyMilestones.map((milestone, index) => (
             <div
               key={index}
               className="relative flex flex-col md:flex-row items-start"

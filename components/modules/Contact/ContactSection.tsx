@@ -73,45 +73,66 @@ export function ContactSection() {
                     <div>
                       <h3 className="font-bold text-lg mb-1">DSWS Office</h3>
                       <p className="text-muted-foreground text-sm leading-relaxed">
-                        123 DSWS Lane, Rural
-                        <br />
-                        Development City, State, 12345
+                        Sundarikhali Rajbari, PO- Agarhati, <br /> PS-
+                        Sandeshkhali, Dist.- North 24 Parganas
+                        <br /> West Bengal, India. Pin - 743329
                       </p>
                     </div>
                   </div>
                   <Link
-                    href="#"
+                    href="https://www.google.com/maps/dir//Sandeshkhali,+Agarhati,+Rajbari,+West+Bengal+743442/@23.674219,87.277855,13z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3a021d39132872d1:0x8bdab46103fdef5d!2m2!1d88.7874799!2d22.4060481?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D"
                     className="text-green-500 font-semibold hover:text-green-600 hidden sm:block"
+                    target="_blank"
                   >
                     Get Directions
                   </Link>
                 </div>
 
                 <div className="flex items-center justify-between p-6 border-b">
-                  <div className="flex items-center gap-4">
+                  <div className="flex items-start gap-4">
                     <div className="h-12 w-12 rounded-xl bg-green-100 flex items-center justify-center shrink-0">
                       <Phone className="h-6 w-6 text-green-600" />
                     </div>
-                    <span className="font-bold text-lg">+91 123 456 7890</span>
+                    <div>
+                      <h3 className="font-bold text-lg mb-1">Phone</h3>
+                      <p className="text-muted-foreground text-sm leading-relaxed">
+                        +91-9732009757 <br /> +91-960909260
+                      </p>
+                    </div>
                   </div>
                   <Link
-                    href="tel:+911234567890"
-                    className="text-green-500 font-semibold hover:text-green-600"
+                    href="tel:+919732009757"
+                    className="text-green-500 font-semibold hover:text-green-600 hidden sm:block"
                   >
                     Call
                   </Link>
                 </div>
 
                 <div className="flex items-center justify-between p-6">
-                  <div className="flex items-center gap-4">
+                  <div className="flex items-start gap-4">
                     <div className="h-12 w-12 rounded-xl bg-green-100 flex items-center justify-center shrink-0">
                       <Mail className="h-6 w-6 text-green-600" />
                     </div>
-                    <span className="font-bold text-lg">contact@dsws.org</span>
+                    <div>
+                      <h3 className="font-bold text-lg mb-1">Email</h3>
+                      <Link
+                        href="mailto:contact@dsws.org"
+                        className="text-muted-foreground text-sm leading-relaxed hover:underline"
+                      >
+                        contact@dsws.org
+                      </Link>
+                      <br />
+                      <Link
+                        href="mailto:info@dsws.org"
+                        className="text-muted-foreground text-sm leading-relaxed hover:underline"
+                      >
+                        info@dsws.org
+                      </Link>
+                    </div>
                   </div>
                   <Link
                     href="mailto:contact@dsws.org"
-                    className="text-green-500 font-semibold hover:text-green-600"
+                    className="text-green-500 font-semibold hover:text-green-600 hidden sm:block"
                   >
                     Email
                   </Link>

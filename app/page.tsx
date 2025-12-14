@@ -4,6 +4,7 @@ import { Journey } from "@/components/modules/Home/Journey";
 import { PartnersAndSupporters } from "@/components/modules/Home/PartnersAndSuporters";
 import { OurValues } from "@/components/modules/Home/OurValues";
 import { Achievements } from "@/components/modules/Home/Achievements";
+import { StoriesOfHope } from "@/components/modules/Impact/StoriesOfImpact";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <WorkAndImpact />
       <Journey />
       <Achievements />
+      <StoriesOfHope />
       <OurValues />
       <PartnersAndSupporters />
     </div>

@@ -9,7 +9,7 @@ export default function Impact() {
       <HeroSection />
       <ImpactInNumbers />
       <CoreAreasOfImpact />
-      <StoriesOfHope />
+      <StoriesOfHope showPartOfTheChange />
     </div>
   );
 }
