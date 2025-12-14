@@ -13,7 +13,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
-import { ContributionDialog } from "@/components/common";
 
 const navLinks = [
   { href: "/about", label: "About Us" },
@@ -61,9 +60,6 @@ export function Navbar() {
               </Link>
             ))}
           </div>
-          <ContributionDialog>
-            <Button variant="primary">Donate</Button>
-          </ContributionDialog>
         </nav>
 
         <Sheet open={isOpen} onOpenChange={setIsOpen}>
@@ -88,9 +84,6 @@ export function Navbar() {
                   {link.label}
                 </Link>
               ))}
-              <Button variant="primary" className="mt-4">
-                Donate
-              </Button>
             </nav>
           </SheetContent>
         </Sheet>

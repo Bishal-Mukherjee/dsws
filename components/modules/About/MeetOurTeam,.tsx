@@ -3,7 +3,6 @@ import Link from "next/link";
 import { teamMembers } from "@/constants/data/about/teamMembers";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ContributionDialog } from "@/components/common";
 
 export function MeetOurTeam() {
   return (
@@ -50,8 +49,8 @@ export function MeetOurTeam() {
         ))}
       </div>
 
-      <section className="bg-brand/20 rounded-xl p-8 md:p-12 text-center mt-8">
-        <div className="flex flex-col items-center gap-4">
+      <section className="bg-brand/20 rounded-xl p-8 text-center mt-12">
+        <div className="flex flex-col items-center gap-6">
           <h2 className="text-black/80 dark:text-white text-2xl md:text-3xl font-bold leading-tight tracking-[-0.015em]">
             Join Us in Making a Difference
           </h2>
@@ -60,21 +59,14 @@ export function MeetOurTeam() {
             change. Whether you donate or volunteer, you are a vital part of our
             mission.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 mt-4">
-            <ContributionDialog>
-              <Button variant={"primary"} className="border px-7 py-5">
-                Donate Now
-              </Button>
-            </ContributionDialog>
-            <Link href={"/get-involved"}>
-              <Button
-                variant={"outline"}
-                className="px-7 py-5 bg-transparent border-black text-md hover:bg-black/5"
-              >
-                Get Involved
-              </Button>
-            </Link>
-          </div>
+          <Link href={"/get-involved"}>
+            <Button
+              variant={"outline"}
+              className="px-10 py-6 bg-transparent border-black text-md hover:bg-black/5"
+            >
+              Get Involved
+            </Button>
+          </Link>
         </div>
       </section>
     </section>
