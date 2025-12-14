@@ -13,7 +13,7 @@ export function OurHistory() {
           </p>
         </div>
 
-        <div className="space-y-6 relative before:content-[''] before:absolute before:left-6 before:top-0 before:bottom-[12px] before:w-0.5 before:bg-gray-200">
+        <div className="space-y-6 relative before:content-[''] before:absolute before:left-6 before:top-0 before:bottom-3 before:w-0.5 before:bg-gray-200">
           {milestones.map((milestone, index) => {
             const Icon = milestone.icon;
             return (
