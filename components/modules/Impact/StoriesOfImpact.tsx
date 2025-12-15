@@ -26,7 +26,7 @@ export function StoriesOfHope({ showPartOfTheChange = false }) {
 
   return (
     <section>
-      <div className="text-center mb-8">
+      <div className="text-center">
         <h2 className="text-[#111813] dark:text-white text-3xl font-bold leading-tight tracking-[-0.015em] mb-3">
           Stories of Hope
         </h2>
