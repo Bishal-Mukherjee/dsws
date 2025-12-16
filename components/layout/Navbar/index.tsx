@@ -29,7 +29,7 @@ export function Navbar() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <nav className="sticky top-0 z-50 w-full bg-background/80 backdrop-blur-sm shadow-xs">
+    <nav className="sticky top-0 z-100 w-full bg-background/80 backdrop-blur-sm shadow-xs">
       <div className="h-16 flex items-center justify-between w-full max-w-7xl mx-auto px-2">
         <Link href="/">
           <div className="flex items-center gap-2">

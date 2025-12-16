@@ -1,5 +1,26 @@
 export const teamMembers = [
   {
+    name: "Keya Ghosh",
+    role: "President",
+    description:
+      "Oversees organizational strategy, partnerships, and program development.",
+    image: "/images/members/keya-ghosh.jpg",
+  },
+  {
+    name: "Hriday Chand Ghosh",
+    role: "Secretary",
+    description:
+      "Manages daily operations, program implementation, and team coordination.",
+    image: "/images/members/hriday-chand-ghosh.jpg",
+  },
+  {
+    name: "Narayan Mondal",
+    role: "Treasurer",
+    description:
+      "Handles financial planning, budgeting, and resource allocation.",
+    image: "/images/members/narayan-mondal.jpg",
+  },
+  {
     name: "Avijit Pradhan",
     role: "Project Manager",
     description:
