@@ -1,13 +1,15 @@
 "use client";
 
 import Link from "next/link";
-import { MapPin, Phone, Mail } from "lucide-react";
+import { MapPin, Phone, Mail, Loader } from "lucide-react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
+import { saveContactMessage } from "@/supabase/messages";
 
 const validationSchema = Yup.object({
   name: Yup.string()
@@ -32,15 +34,24 @@ export function ContactSection() {
     validationSchema,
     onSubmit: async (values, { setSubmitting, resetForm }) => {
       try {
-        console.log("Form submitted:", values);
-        await new Promise((resolve) => setTimeout(resolve, 1500));
+        const result = await saveContactMessage({
+          fullName: values.name,
+          email: values.email,
+          subject: values.subject,
+          message: values.message,
+        });
 
-        alert("Message sent successfully!");
-
-        resetForm();
+        if (result.success) {
+          toast.success(
+            "Message sent successfully! We'll get back to you soon."
+          );
+          resetForm();
+        } else {
+          toast.error(`Failed to send message: ${result.error}`);
+        }
       } catch (error) {
         console.error("Error submitting form:", error);
-        alert("Failed to send message. Please try again.");
+        toast.error("Failed to send message. Please try again.");
       } finally {
         setSubmitting(false);
       }
@@ -233,7 +244,14 @@ export function ContactSection() {
                     className="w-full"
                     disabled={formik.isSubmitting}
                   >
-                    {formik.isSubmitting ? "Sending..." : "Send Message"}
+                    {formik.isSubmitting ? (
+                      <>
+                        <Loader className="h-4 w-4 animate-spin" />
+                        Sending...
+                      </>
+                    ) : (
+                      <>Send Message</>
+                    )}
                   </Button>
                   <p className="text-center text-muted-foreground text-xs mt-4">
                     We care about your data. Read our{" "}

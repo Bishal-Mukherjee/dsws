@@ -3,7 +3,8 @@
 import { useState } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import { Contact, User, Mail, Phone, LockKeyhole } from "lucide-react";
+import { Contact, User, Mail, Phone, LockKeyhole, Loader2 } from "lucide-react";
+import { toast } from "sonner";
 import {
   Dialog,
   DialogContent,
@@ -15,6 +16,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { saveVolunteerApplication } from "@/supabase/volunteers";
 
 const validationSchema = Yup.object({
   fullName: Yup.string()
@@ -62,19 +64,26 @@ export function VolunteerDialog({ children }: VolunteerDialogProps) {
     validationSchema,
     onSubmit: async (values, { setSubmitting, resetForm }) => {
       try {
-        console.log("Volunteer application submitted:", values);
-        // Simulate API call
-        await new Promise((resolve) => setTimeout(resolve, 1500));
+        const result = await saveVolunteerApplication({
+          fullName: values.fullName,
+          email: values.email,
+          phoneNumber: values.phone,
+          availability: values.availability,
+          motivation: values.motivation,
+        });
 
-        alert(
-          `Thank you for applying, ${values.fullName}! We'll contact you shortly at ${values.email}.`
-        );
-
-        resetForm();
-        setOpen(false);
+        if (result.success) {
+          toast.success(
+            `Thank you for applying, ${values.fullName}! We'll contact you shortly.`
+          );
+          resetForm();
+          setOpen(false);
+        } else {
+          toast.error(`Failed to submit application: ${result.error}`);
+        }
       } catch (error) {
         console.error("Error submitting application:", error);
-        alert("Failed to submit application. Please try again.");
+        toast.error("Failed to submit application. Please try again.");
       } finally {
         setSubmitting(false);
       }
@@ -111,6 +120,7 @@ export function VolunteerDialog({ children }: VolunteerDialogProps) {
                   onChange={formik.handleChange}
                   onBlur={formik.handleBlur}
                   className="pl-10 bg-muted/30"
+                  disabled={formik.isSubmitting}
                 />
               </div>
               {formik.touched.fullName && formik.errors.fullName && (
@@ -133,6 +143,7 @@ export function VolunteerDialog({ children }: VolunteerDialogProps) {
                   onChange={formik.handleChange}
                   onBlur={formik.handleBlur}
                   className="pl-10 bg-muted/30"
+                  disabled={formik.isSubmitting}
                 />
               </div>
               {formik.touched.email && formik.errors.email && (
@@ -156,6 +167,7 @@ export function VolunteerDialog({ children }: VolunteerDialogProps) {
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
                 className="pl-10 bg-muted/30"
+                disabled={formik.isSubmitting}
               />
             </div>
             {formik.touched.phone && formik.errors.phone && (
@@ -186,6 +198,7 @@ export function VolunteerDialog({ children }: VolunteerDialogProps) {
                     }
                   }}
                   className="px-6 py-2.5 text-sm font-medium transition-all duration-200"
+                  disabled={formik.isSubmitting}
                 >
                   {option.label}
                 </Button>
@@ -210,6 +223,7 @@ export function VolunteerDialog({ children }: VolunteerDialogProps) {
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
               className="bg-muted/30 resize-none min-h-[100px]"
+              disabled={formik.isSubmitting}
             />
             {formik.touched.motivation && formik.errors.motivation && (
               <p className="text-sm text-red-500">{formik.errors.motivation}</p>
@@ -222,7 +236,14 @@ export function VolunteerDialog({ children }: VolunteerDialogProps) {
             disabled={formik.isSubmitting}
             className="w-full"
           >
-            {formik.isSubmitting ? "Submitting..." : "Submit Application"}
+            {formik.isSubmitting ? (
+              <>
+                <Loader2 className="h-4 w-4 animate-spin mr-2" />
+                Submitting...
+              </>
+            ) : (
+              "Submit Application"
+            )}
           </Button>
 
           <p className="text-xs text-center text-muted-foreground flex items-center justify-center gap-1 mt-2">
