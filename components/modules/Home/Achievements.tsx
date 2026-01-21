@@ -22,7 +22,7 @@ export function Achievements() {
           {/* Award Image */}
           <div className="w-full">
             <Image
-              src="/images/award.jpg"
+              src={`${process.env.NEXT_PUBLIC_STORAGE_BUCKET}/images/misc/award.jpg`}
               alt="Nari Shakti Puraskar Award Ceremony"
               width={1200}
               height={400}

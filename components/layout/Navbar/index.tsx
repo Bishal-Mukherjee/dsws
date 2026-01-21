@@ -36,11 +36,12 @@ export function Navbar() {
             <Image
               src="/dsws_brand_logo.png"
               alt="DSWS Logo"
-              width={40}
-              height={40}
+              width={30}
+              height={30}
+              className="rounded-full"
             />
             <h2 className="text-lg font-bold tracking-tight">DSWS</h2>
-          </div>
+          </div>	
         </Link>
 
         <nav className="hidden md:flex flex-1 justify-end gap-8 items-center">
@@ -53,7 +54,7 @@ export function Navbar() {
                   "text-sm font-medium hover:text-foreground transition-colors",
                   pathname === link.href
                     ? "text-brand hover:text-brand"
-                    : "text-muted-foreground"
+                    : "text-muted-foreground",
                 )}
               >
                 {link.label}
@@ -77,7 +78,7 @@ export function Navbar() {
                   href={link.href}
                   className={cn(
                     "text-sm font-medium text-muted-foreground hover:text-foreground transition-colors",
-                    pathname === link.href && "text-brand"
+                    pathname === link.href && "text-brand",
                   )}
                   onClick={() => setIsOpen(false)}
                 >
