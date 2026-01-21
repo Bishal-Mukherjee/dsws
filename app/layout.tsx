@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Lexend } from "next/font/google";
 import { cn } from "@/lib/utils";
+import { Toaster } from "@/components/ui/sonner";
 import "./globals.css";
 
 import { Navbar } from "@/components/layout/Navbar";
@@ -31,6 +32,7 @@ export default function RootLayout({
         <Navbar />
         <Main>{children}</Main>
         <Footer />
+        <Toaster position="top-center" richColors />
       </body>
     </html>
   );

@@ -26,7 +26,7 @@ export function MeetOurTeam() {
           >
             {member.image && (
               <Image
-                src={member.image}
+                src={`${process.env.NEXT_PUBLIC_STORAGE_BUCKET}${member.image}`}
                 alt={`Portrait of ${member.name}`}
                 width={128}
                 height={128}
