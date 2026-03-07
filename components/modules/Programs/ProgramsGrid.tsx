@@ -22,10 +22,10 @@ export function ProgramsGrid() {
               />
             </div>
             <CardContent className="p-4 space-y-4 pb-6">
-              <h3 className="text-xl font-bold text-foreground">
+              <h3 className="text-lg md:text-xl font-bold text-foreground h-6 md:h-12">
                 {program.title}
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
+              <p className="text-muted-foreground text-sm leading-relaxed h-24 md:h-32">
                 {program.description}
               </p>
               <Button

@@ -60,7 +60,7 @@ function TestimonialCard({
 export function VolunteerTestimonials() {
   return (
     <section className="mx-auto space-y-12">
-      <div>
+      {/* <div>
         <h2 className="text-3xl font-bold text-foreground text-center mb-8">
           Voices of Our Volunteers
         </h2>
@@ -75,7 +75,7 @@ export function VolunteerTestimonials() {
             />
           ))}
         </div>
-      </div>
+      </div> */}
 
       <section id="apply-for-volunteer">
         <div className="bg-brand/20 rounded-2xl p-8 md:p-12 text-center">

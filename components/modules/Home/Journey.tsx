@@ -90,7 +90,7 @@ export function Journey() {
                   </div>
                 </div>
 
-                <div className="absolute left-1/2 top-4 size-4 rounded-full bg-[#54ec63] border-4 border-white -translate-x-1/2 z-10" />
+                <div className="absolute left-1/2 top-4 size-4 rounded-full bg-[#54ec63] border-4 border-white -translate-x-1/2" />
 
                 <div
                   className={cn("w-1/2", {

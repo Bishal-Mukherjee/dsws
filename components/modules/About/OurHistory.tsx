@@ -19,7 +19,7 @@ export function OurHistory() {
             return (
               <div key={index} className="flex items-start gap-4 relative">
                 <div className="shrink-0 bg-gray-50 shadow-sm rounded-2xl">
-                  <div className="w-12 h-12 rounded-lg text-brand flex items-center justify-center relative z-50">
+                  <div className="w-12 h-12 rounded-lg text-brand flex items-center justify-center relative">
                     <Icon className="w-6 h-6 text-brand" />
                   </div>
                 </div>
