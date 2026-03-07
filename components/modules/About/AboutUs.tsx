@@ -21,7 +21,7 @@ export const AboutUs = () => {
             fill
             className="rounded-xl object-cover bg-center"
             alt="A group of children participating in a DSWS event, holding signs and smiling."
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCsxm3T96GBU1javZS-sYk3ABzaFyVanrLst9ryRVMPwDjxqXvau_U5kC470mz1l2JD85vmpwqDrjykpw3ay09yomBG54LNwsZOAqUcE5TUELq63oTMvRDfnfniSeiwgBmKzDrCuEBYcA8hDlosNLRgZoX8c0xLOWzARRlW1kD8Q6TbMNuBLallCykN5392MJ29xhqgiHNCvL862CVkLw0gh1iQ0boIf-rWqMjIznA1i_M_cIC5ROVVV_nL8rK02fU9zz79pVeaHmH"
+            src={`${process.env.NEXT_PUBLIC_AWS_S3_URL}/media/gallery/isi7jusinqt6iqa0w28f.jpg`}
           />
         </div>
         <div className="flex flex-col gap-8">
