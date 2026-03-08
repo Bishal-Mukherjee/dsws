@@ -26,7 +26,7 @@ export function MeetOurTeam() {
           >
             {member.image && (
               <Image
-                src={`${process.env.NEXT_PUBLIC_STORAGE_BUCKET}${member.image}`}
+                src={`${process.env.NEXT_PUBLIC_AWS_S3_URL}${member.image}`}
                 alt={`Portrait of ${member.name}`}
                 width={128}
                 height={128}

@@ -22,7 +22,7 @@ export function Achievements() {
           {/* Award Image */}
           <div className="w-full">
             <Image
-              src={`${process.env.NEXT_PUBLIC_STORAGE_BUCKET}/images/misc/award.jpg`}
+              src={`${process.env.NEXT_PUBLIC_AWS_S3_URL}/misc/award.jpg`}
               alt="Nari Shakti Puraskar Award Ceremony"
               width={1200}
               height={400}
@@ -73,7 +73,7 @@ export function Achievements() {
               <div
                 className={cn(
                   "w-16 h-16 rounded-full flex items-center justify-center -mt-14 border-4 border-white dark:border-background-dark",
-                  achievement.iconBg
+                  achievement.iconBg,
                 )}
               >
                 <achievement.icon className={cn(achievement.iconColor)} />
