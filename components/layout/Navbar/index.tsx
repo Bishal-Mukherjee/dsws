@@ -18,6 +18,7 @@ const navLinks = [
   { href: "/about", label: "About Us" },
   { href: "/impact", label: "Impact" },
   { href: "/programs", label: "Programs" },
+  { href: "/compliance", label: "Compliance" },
   { href: "/get-involved", label: "Get Involved" },
   { href: "/contact", label: "Contact" },
 ];
