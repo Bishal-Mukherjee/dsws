@@ -63,4 +63,12 @@ export const journeyMilestones = [
     images: [],
     alignRight: true,
   },
+  {
+    year: "2025",
+    title: "Child Path Model",
+    description:
+      "Expanded child protection model alongside mangrove plantations to promote sustainable livelihoods and ecosystem protection.",
+    images: [],
+    alignRight: false,
+  },
 ];
