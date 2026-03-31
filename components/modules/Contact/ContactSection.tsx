@@ -127,17 +127,10 @@ export function ContactSection() {
                     <div>
                       <h3 className="font-bold text-lg mb-1">Email</h3>
                       <Link
-                        href="mailto:contact@dsws.org"
+                        href="mailto:dsws@gmail.com"
                         className="text-muted-foreground text-sm leading-relaxed hover:underline"
                       >
-                        contact@dsws.org
-                      </Link>
-                      <br />
-                      <Link
-                        href="mailto:info@dsws.org"
-                        className="text-muted-foreground text-sm leading-relaxed hover:underline"
-                      >
-                        info@dsws.org
+                        dsws@gmail.com
                       </Link>
                     </div>
                   </div>

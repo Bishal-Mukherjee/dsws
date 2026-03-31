@@ -21,46 +21,18 @@ export const teamMembers = [
     image: "/members/narayan-mondal.jpg",
   },
   {
+    name: "Aditi Mukherjee",
+    role: "Programme Manager",
+    description:
+      "Leads program planning, operations, and stakeholder coordination.",
+    image: "/members/aditi-mukherjee.jpg",
+  },
+  {
     name: "Avijit Pradhan",
     role: "Project Manager",
     description:
       "Leads health, child protection, and livelihood projects with over 15 years of program management experience.",
     image: "/members/avijit-pradhan.jpg",
-  },
-  {
-    name: "Monirul Munshi",
-    role: "Procurement and Logistics Officer",
-    description:
-      "Manages procurement and logistics, with strong experience in child protection and social enterprises.",
-    image: "/members/monirul-munshi.jpg",
-  },
-  {
-    name: "Mithu Mondal",
-    role: "Senior Social Worker",
-    description:
-      "Works across disaster management, child protection, gender, and health initiatives.",
-    image: "/members/mithu-mondal.jpg",
-  },
-  {
-    name: "Panchami Patra Mondal",
-    role: "Social Worker",
-    description:
-      "Supports adolescent girls through education, counseling, and community engagement.",
-    image: "/members/panchami-patra-mondal.jpg",
-  },
-  {
-    name: "Shibani Das Howly",
-    role: "Community Mobilizer",
-    description:
-      "Focuses on child protection, case management, and leadership training.",
-    image: "/members/shibani-das-howly.jpg",
-  },
-  {
-    name: "Ambalika Das Paik",
-    role: "Community Mobilizer",
-    description:
-      "Leads community sensitization, outreach programs, and youth engagement.",
-    image: "/members/ambalika-das-paik.jpg",
   },
   {
     name: "Sindhu Kr Sui",
@@ -77,18 +49,25 @@ export const teamMembers = [
     image: "/members/gautam-maity.jpg",
   },
   {
-    name: "Subrata Das",
-    role: "Community Mobilizer",
+    name: "Mithu Mondal",
+    role: "Senior Social Worker",
     description:
-      "Works on community sensitization, child protection, and youth engagement.",
-    image: "/members/subrata-das.jpg",
+      "Works across disaster management, child protection, gender, and health initiatives.",
+    image: "/members/mithu-mondal.jpg",
   },
   {
-    name: "Aditi Mukerjee",
-    role: "Programme Manager",
+    name: "Panchami Patra Mondal",
+    role: "Social Worker",
     description:
-      "Leads program planning, operations, and stakeholder coordination.",
-    image: "/members/aditi-mukerjee.jpg",
+      "Supports adolescent girls through education, counseling, and community engagement.",
+    image: "/members/panchami-patra-mondal.jpg",
+  },
+  {
+    name: "Monirul Munshi",
+    role: "Procurement and Logistics Officer",
+    description:
+      "Manages procurement and logistics, with strong experience in child protection and social enterprises.",
+    image: "/members/monirul-munshi.jpg",
   },
   {
     name: "Amit Kr Pal",
@@ -96,5 +75,50 @@ export const teamMembers = [
     description:
       "Manages financial records, compliance, and reporting for the organization.",
     image: "/members/amit-kr-pal.jpg",
+  },
+  {
+    name: "Prosenjit Das",
+    role: "Data Analyst",
+    description: "Sponsor Relationship Management focal person.",
+    image: "/members/prosenjit-das.jpg",
+  },
+  {
+    name: "Dipanshu Chakraborty",
+    role: "Field Coordinator",
+    description: "Child safeguarding focal person.",
+    image: "/members/dipanshu-chakraborty.jpg",
+  },
+  {
+    name: "Izaz Tarafdar",
+    role: "Field Coordinator",
+    description: "Child safety net focal person.",
+    image: "/members/izaz-tarafdar.jpg",
+  },
+  {
+    name: "Sreenayana Bhattacharya",
+    role: "Field Coordinator",
+    description: "Event and cultural head.",
+    image: "/members/sreenayana-bhattacharya.jpg",
+  },
+  {
+    name: "Shibani Das Howly",
+    role: "Community Mobilizer",
+    description:
+      "Focuses on child protection, case management, and leadership training.",
+    image: "/members/shibani-das-howly.jpg",
+  },
+  {
+    name: "Ambalika Das Paik",
+    role: "Community Mobilizer",
+    description:
+      "Leads community sensitization, outreach programs, and youth engagement.",
+    image: "/members/ambalika-das-paik.jpg",
+  },
+  {
+    name: "Subrata Das",
+    role: "Community Mobilizer",
+    description:
+      "Works on community sensitization, child protection, and youth engagement.",
+    image: "/members/subrata-das.jpg",
   },
 ];

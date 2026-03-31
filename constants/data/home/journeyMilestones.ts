@@ -1,25 +1,25 @@
 export const journeyMilestones = [
   {
+    year: "1994",
+    title: "Formal Foundation",
+    description:
+      "DSWS was formally structured to drive long-term development and resilience in vulnerable communities.",
+    images: [],
+    alignRight: false,
+  },
+  {
     year: "2000",
     title: "Roots in Community Action",
     description:
       "DSWS began grassroots work in the Sundarbans, focusing on education, child rights, and community development.",
     images: [],
-    alignRight: false,
+    alignRight: true,
   },
   {
     year: "2009",
     title: "Responding to Cyclone Aila",
     description:
       "Following Cyclone Aila, DSWS led large-scale relief, rehabilitation, and livelihood recovery efforts.",
-    images: [],
-    alignRight: true,
-  },
-  {
-    year: "2010",
-    title: "Formal Foundation",
-    description:
-      "DSWS was formally structured to drive long-term development and resilience in vulnerable communities.",
     images: [],
     alignRight: false,
   },
