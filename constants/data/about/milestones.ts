@@ -3,7 +3,7 @@ import { Flag, Users, Leaf, School, Sun } from "lucide-react";
 export const milestones = [
   {
     title: "Foundation of DSWS",
-    year: "2005",
+    year: "1994",
     icon: Flag,
   },
   {
