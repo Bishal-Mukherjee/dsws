@@ -73,12 +73,12 @@ export const showcaseImages: ShowcaseImage[] = [
     caption: "Volunteer Day",
   },
   {
-    src: "/media/gallery/m4l9qkq9fjfckq6wpesa.jpg",
-    alt: "Levlihoods",
-    caption: "Levlihoods Development",
+    src: "/media/gallery/vv3xzciyxxrwi0mgvxwz.jpg",
+    alt: "Livelihoods Development",
+    caption: "Livelihoods Development",
   },
   {
-    src: "/media/gallery/vv3xzciyxxrwi0mgvxwz.jpg",
+    src: "/media/gallery/m4l9qkq9fjfckq6wpesa.jpg",
     alt: "Disaster Risk Reduction",
     caption: "Disaster Risk Reduction",
   },
