@@ -43,7 +43,7 @@ export function ContactSection() {
 
         if (result.success) {
           toast.success(
-            "Message sent successfully! We'll get back to you soon."
+            "Message sent successfully! We'll get back to you soon.",
           );
           resetForm();
         } else {
@@ -247,14 +247,15 @@ export function ContactSection() {
                     )}
                   </Button>
                   <p className="text-center text-muted-foreground text-xs mt-4">
-                    We care about your data. Read our{" "}
+                    We care about your data.
+                    {/* Read our
                     <Link
                       href="#"
                       className="text-green-500 font-semibold hover:underline"
                     >
                       privacy policy
                     </Link>
-                    .
+                    . */}
                   </p>
                 </div>
               </form>
