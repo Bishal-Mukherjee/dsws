@@ -7,6 +7,9 @@ import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Main } from "@/components/layout/Main";
 import { Footer } from "@/components/layout/Footer";
+import { PostHogProvider } from "./providers";
+import { PostHogPageView } from "./PostHogPageView";
+import { Suspense } from "react";
 
 const lexend = Lexend({
   variable: "--font-lexend",
@@ -29,10 +32,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={cn("tracking-tight antialiased", lexend.className)}>
-        <Navbar />
-        <Main>{children}</Main>
-        <Footer />
-        <Toaster position="top-center" richColors />
+        <PostHogProvider>
+          <Suspense fallback={null}>
+            <PostHogPageView />
+          </Suspense>
+          <Navbar />
+          <Main>{children}</Main>
+          <Footer />
+          <Toaster position="top-center" richColors />
+        </PostHogProvider>
       </body>
     </html>
   );
